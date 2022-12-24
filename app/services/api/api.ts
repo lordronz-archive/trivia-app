@@ -12,7 +12,9 @@ import {
 } from "apisauce"
 import { GeneralApiProblem, getGeneralApiProblem } from "./apiProblem" // @demo remove-current-line
 import type {
-  ApiConfig, ApiFeedResponse, GetQuestionsResult, // @demo remove-current-line
+  ApiConfig,
+  ApiFeedResponse,
+  GetQuestionsResult, // @demo remove-current-line
 } from "./api.types"
 import { QuestionSnapshotIn } from "../../models"
 import uuid from "react-native-uuid"
@@ -97,7 +99,7 @@ export class Api {
       return { kind: "bad-data" }
     }
   }
-  
+
   async getQuestions(): Promise<GetQuestionsResult> {
     // make the api call
     const response: ApiResponse<any> = await this.apisauce.get("", { amount: API_PAGE_SIZE })

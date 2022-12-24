@@ -27,14 +27,14 @@ export const QuestionModel = types
   }))
   .actions((self) => ({
     setShuffled(shuffled: boolean) {
-      self.shuffled = shuffled;
+      self.shuffled = shuffled
     },
   }))
   .views((self) => ({
     get allAnswers() {
       if (!self.shuffled) {
         self.setAnswers(shuffle(self.incorrectAnswers.concat([self.correctAnswer])))
-        self.setShuffled(true);
+        self.setShuffled(true)
       }
       return self.answers
     },

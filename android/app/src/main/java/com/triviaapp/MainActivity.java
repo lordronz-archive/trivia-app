@@ -1,4 +1,4 @@
-package com.pizzaapp;
+package com.triviaapp;
 
 import android.os.Bundle;
 
@@ -17,7 +17,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "PizzaApp";
+    return "TriviaApp";
   }
 
   /**

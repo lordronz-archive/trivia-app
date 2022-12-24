@@ -18,7 +18,8 @@ import { useColorScheme } from "react-native"
 import Config from "../config"
 import { useStores } from "../models" // @demo remove-current-line
 import {
-  LoginScreen, QuestionScreen, // @demo remove-current-line
+  LoginScreen,
+  QuestionScreen, // @demo remove-current-line
 } from "../screens"
 import { DemoTabParamList } from "./DemoNavigator" // @demo remove-current-line
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
