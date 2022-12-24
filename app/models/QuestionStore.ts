@@ -1,4 +1,4 @@
-import { SnapshotIn, SnapshotOut, types, flow } from "mobx-state-tree"
+import { SnapshotIn, SnapshotOut, types, flow, Instance } from "mobx-state-tree"
 import { api } from "../services/api"
 import { GetQuestionsResult } from "../services/api/api.types"
 import { withSetPropAction } from "./helpers/withSetPropAction"
@@ -31,6 +31,7 @@ export const QuestionStoreModel = types
       }
     }),
   }))
+export interface QuestionStore extends Instance<typeof QuestionStoreModel> {}
 export interface QuestionStoreSnapshotOut extends SnapshotOut<typeof QuestionStoreModel> {}
 export interface QuestionStoreSnapshotIn extends SnapshotIn<typeof QuestionStoreModel> {}
 export const createQuestionStoreDefaultModel = () => types.optional(QuestionStoreModel, {})
