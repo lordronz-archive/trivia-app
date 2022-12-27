@@ -45,9 +45,11 @@ const QUESTION: TextStyle = {
 //   fontSize: 12,
 // }
 
-// const ANSWER_WRAPPER: ViewStyle = {
-//   paddingVertical: spacing.extraSmall,
-// }
+const ANSWER_WRAPPER: ViewStyle = {
+  paddingVertical: spacing.extraSmall,
+  flexDirection: "row",
+  alignItems: "center",
+}
 
 const CHECK_ANSWER: ViewStyle = {
   paddingVertical: spacing.extraSmall,
@@ -101,9 +103,9 @@ export const QuestionScreen: FC<QuestionScreenProps> = observer(function Questio
           value={question.guess}
         >
           {question.allAnswers.map((v, i) => (
-            <View key={`${v}-${i}`}>
-              <Text>{v}</Text>
+            <View key={`${v}-${i}`} style={ANSWER_WRAPPER}>
               <RadioButton value={v} />
+              <Text>{v}</Text>
             </View>
           ))}
         </RadioButton.Group>
